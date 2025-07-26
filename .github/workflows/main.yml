@@ -19,5 +19,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install test tools
+        run: npm install -D vitest jsdom
+
+      - name: Install vue test tools
+        run: npm install -D @vitejs/plugin-vue @vue/test-utils
+
       - name: Run tests with Vitest
         run: npm test
